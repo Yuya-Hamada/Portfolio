@@ -1,3 +1,11 @@
+
+
+.wrapper{
+  overflow: hidden;
+  /* display: none; */
+}
+
+
 header {
   height:1000px;
 }
@@ -8,8 +16,8 @@ header {
 
 .header-wrapper{
   height: 100%;
-  width:auto;
-  background-image: url(./images/top_image.jpeg);
+  width: 100%;
+  background-image: url(./images/glasses.jpeg);
   /* opacity: 0.8; */
   background-size: cover;
   background-repeat: no-repeat;
@@ -24,12 +32,21 @@ header {
 }
 
 header h1, header a{
-  color: white;
+  color: black;
 }
 
 .header-logo{
-  font-size: 250%;
+  font-size: 130%;
   opacity: 1;
+}
+
+.header-logo a{
+  text-decoration: none;
+}
+
+.header-logo a:hover{
+  transition: 0.5s;
+  opacity: 0.3;
 }
 
 .header-nav{
@@ -43,9 +60,14 @@ header h1, header a{
 
 .header-nav a{
   text-decoration: none;
-  font-size: 150%;
+  font-size: 120%;
   font-weight: bold;
   opacity: 1;
+}
+
+.header-nav a:hover{
+  transition: 0.5s;
+  opacity: 0.3;
 }
 
 .catchcopy{
@@ -63,9 +85,8 @@ header h1, header a{
 }
 
 .katachi{
-  color: #A5C9FF;
+  color: #F9CE00;
 }
-
 
 .about{
   margin: 30px 0;
@@ -73,7 +94,7 @@ header h1, header a{
 }
 
 .column{
-  color:white;
+  /* color:white; */
   text-align: center;
   font-size: 250%;
   margin: 130px 0;
@@ -82,7 +103,7 @@ header h1, header a{
 .about-container{
   width: 90%;
   float: right;
-  background-color: #A5C9FF;
+  background-color:#F9CE00 ;
   margin: 20px 0;
   text-align: center;
 }
@@ -100,11 +121,13 @@ header h1, header a{
   font-size: 300%;
   margin: 50px 0;
   padding-left: 70px;
+  /* color: white; */
 }
 
 .about .div-pre{
   font-size: 130%;
   padding-bottom: 85px;
+  /* color: white; */
 }
 
 .about-content{
@@ -119,23 +142,26 @@ header h1, header a{
 }
 
 .row{
-  margin-bottom: 50px;
-  margin-top: 30px;
+  
+  /* margin-bottom: 50px; */
+  /* margin-top: 30px; */
   text-align: center;
-  margin-left: 300px;
-  margin-right: 300px;
+  /* margin-left: 300px; */
+  /* margin-right: 300px; */
 }
 
 .row ul{
   display: flex;
   justify-content: space-between;
+  margin: 0 50px;
+  
 }
 
 .row ul li{
   list-style: none;
-  width: calc((100% - 90px)/3);
+  width: calc((100% - 100px)/3);
   background-color: #fff;
-  border: solid 10px #FFC007;
+  border: solid 10px #F9CE00;
 
 }
 
@@ -150,7 +176,7 @@ header h1, header a{
 }
 
 .row ul li p{
-  /* line-height: 20px; */
+  line-height: 20px;
   font-size: 110%;
   padding: 20px;
   letter-spacing: 2px;
@@ -158,13 +184,13 @@ header h1, header a{
 
 .fa-edit, .fa-palette, .fa-code{
   font-size: 70px;
-  /* margin: 20px 0; */
+  margin: 20px 0;
 }
 
 .works p{
   text-align: center;
   margin: 30px 0;
-  color: white;
+  /* color: white; */
   font-size: 110%;
 }
 
@@ -179,23 +205,705 @@ header h1, header a{
 }
 
 .works-row img:hover{
-  box-shadow: 10px 10px 10px #FFC007;
+  box-shadow: 10px 10px 10px #F9CE00;
   transform: translatey(-15px);
-  transition-duration: 0.5s;
+  transition-duration: 1s;
 }
 
-.form{
+form{
   text-align: center;
   margin-bottom: 30px;
 }
 
-.form p{
-  color: white;
-  font-size: 130%;
+form p{
+  /* color: white; */
+  font-size: 120%;
   padding: 10px 0;
 }
 
 .footer p{
   color: white;
   font-size: 110%;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 15px;
 }
+
+input, textarea{
+  border: 1px solid #F9CE00;
+  margin: 15px 0;
+  border-radius: 3px;
+  font-size: 16px;
+}
+
+input{
+  height: 30px;
+  width: 250px;
+}
+
+.submit{
+  width: 100px;
+  height: 45px;
+  background-color: #F9CE00;
+  border-radius: 5px;
+}
+
+.submit:hover{
+  opacity: 0.7;
+  transition: 0.3s;
+}
+
+.contact-top{
+  margin-top: 230px;
+  margin-bottom: 80px;
+}
+
+.contact{
+  margin-bottom: 100px;
+}
+
+.burger-btn{
+  display: none;;
+}
+
+.footer-top{
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  opacity: 1;
+}
+
+.footer-logo a{
+  text-decoration: none;
+  color: white;
+  font-size: 120%;
+}
+
+.footer-logo a:hover{
+  transition: 0.5s;
+  opacity: 0.5;
+}
+
+.footer-nav{
+  margin-right: 70px;
+}
+
+.footer-nav li{
+  display: inline-block;
+  padding-left: 80px;
+}
+
+.footer-nav a{
+  color:white;
+  text-decoration: none;
+  font-size: 120%;
+  opacity: 1;
+}
+
+.footer-nav a:hover{
+  transition: 0.5s;
+  opacity: 0.5;
+}
+
+
+
+
+
+
+ 
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  .wrapper{
+    width: 100%;
+    overflow: hidden;
+  }
+
+
+  header{
+    width: 100%;
+    height: 900px;
+  }
+
+  .header-wrapper{
+    width: 100%;
+  }
+
+  .header-message{
+    font-size: 270%;
+  }
+
+  .skill{
+    font-size: 90%;
+  }
+
+  .row ul{
+    /* flex-direction: column; */
+    /* align-items: center; */
+    /* width: 100%; */
+  }
+
+  .row ul li{
+    /* margin: 10px 0; */
+  }
+
+
+  .works-row ul{
+    flex-direction: column;
+    align-items: center;
+    /* width: 100%; */
+  }
+
+  .works-row ul li{
+    margin-bottom: 25px;
+  }
+  
+ }
+
+
+ 
+@media all and (min-width: 426px) and (max-width: 768px) { 
+
+
+  
+  .wrapper{
+    width: 100%;
+  }
+
+  header{
+    width: 100%;
+    height: 550px;
+  }
+
+  .header-top{
+    width: 100%;
+    padding-top: 10px;
+    
+
+  }
+  
+  .header-wrapper{
+    height: 110%;
+  }
+
+  .header-logo{
+    font-size: 100%;
+    padding-top: 10px;
+  }
+
+
+  .header-nav ul li{
+    padding:0 15px ;
+  }
+
+  .header-nav ul li a{
+    font-size: 70%;
+  }
+
+  .catchcopy{
+    margin-top: 300px;
+  }
+
+  .header-message{
+    font-size: 160%;
+  }
+
+  .column{
+    font-size: 170%;
+    /* margin: 70px 0; */
+  }
+
+  .about-top{
+    margin-top:150px;
+    margin-bottom: 80px;
+  }
+  
+  .row ul{
+    flex-direction: column;
+    align-items: center;
+
+  }
+
+  .row ul li{
+    margin: 15px 0;
+    height: 400px;
+    width: 500px;
+  }
+
+
+  .works-row ul{
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .works-row ul li{
+    margin-bottom: 25px;
+  }
+
+  .about{
+    height: 1000px;
+    margin-top:10px;
+    /* margin-bottom:5px; */
+  }
+
+  .about img{
+    margin-left:30px;
+  }
+
+  .about-container{
+    /* width: 100%; */
+  }  
+
+  .myname{
+    font-size:150%;
+    /* margin-left: 50px; */
+  }
+
+  .about-content{
+    font-size:110%;
+  }
+
+  .career{
+    font-size: 70%;
+  }
+
+  .skill{
+    font-size:60%;
+  }
+
+  .footer{
+
+  }
+
+  
+  .footer-logo{
+    font-size: 50%;
+  }
+
+  
+
+  .footer-nav a{
+    font-size:50%;
+  }
+
+  .footer-nav li{
+    padding: 0 15px;
+  }
+
+  .footer-top{
+    /* width: 100%; */
+  }
+
+  .footer p{
+    font-size:10%;
+    padding-top:0;
+  }
+
+  /*　ハンバーガーボタン　*/
+.hamburger {
+  display : block;
+  position: absolute;
+  z-index : 3;
+  right : 13px;
+  top   : 12px;
+  width : 42px;
+  height: 42px;
+  cursor: pointer;
+  text-align: center;
+}
+.hamburger span {
+  display : block;
+  position: absolute;
+  width   : 30px;
+  height  : 2px ;
+  left    : 6px;
+  background : #555;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition   : 0.3s ease-in-out;
+  transition        : 0.3s ease-in-out;
+}
+.hamburger span:nth-child(1) {
+  top: 10px;
+}
+.hamburger span:nth-child(2) {
+  top: 20px;
+}
+.hamburger span:nth-child(3) {
+  top: 30px;
+}
+
+/* ナビ開いてる時のボタン */
+.hamburger.active span:nth-child(1) {
+  top : 16px;
+  left: 6px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform   : rotate(-45deg);
+  transform        : rotate(-45deg);
+}
+
+.hamburger.active span:nth-child(2),
+.hamburger.active span:nth-child(3) {
+  top: 16px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform   : rotate(45deg);
+  transform        : rotate(45deg);
+}
+
+
+
+#globalMenuSp {
+  position: relative;
+  z-index : 2;
+  top  : 0;
+  left : 0;
+  color: white;
+  background: black;
+  text-align: center;
+  transform: translateX(100%);
+  transition: all 0.6s;
+  width: 80%;
+  /* float: right; */
+}
+
+#globalMenuSp ul {
+  background: black;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+}
+
+#globalMenuSp ul li {
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+  border-bottom: 1px solid #fff;
+}
+#globalMenuSp ul li:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+#globalMenuSp ul li:hover{
+  background :#ddd;
+}
+
+#globalMenuSp ul li a {
+  display: block;
+  color: white;
+  font-weight: bold;
+  padding: 1em 0;
+  text-decoration :none;
+}
+
+#globalMenuSp ul li a:hover{
+  color:black;
+}
+
+/* このクラスを、jQueryで付与・削除する */
+#globalMenuSp.active {
+  transform: translateX(0%);
+}
+
+}
+ 
+@media all and (max-width: 425px) {
+
+  .wrapper{
+    width: 100%;
+  }
+
+  header{
+    width: 100%;
+    height: 350px;
+  }
+
+  .header-top{
+    width: 100%;
+    padding-top: 10px;
+    /* padding-left: 50px; */
+    
+
+  }
+  
+  .header-wrapper{
+    height: 110%;
+    /* width: 110%; */
+    width: 100%;
+  }
+
+
+  .header-nav ul li{
+    padding:0 15px ;
+  }
+
+  .header-nav ul li a{
+    font-size: 70%;
+  }
+
+  .catchcopy{
+    margin-top: 110px;
+    margin-left:30px;
+  }
+
+  .header-message{
+    font-size: 120%;
+  }
+
+  .column{
+    font-size: 170%;
+    /* margin: 70px 0; */
+  }
+
+  .about-top{
+    margin-top:150px;
+    margin-bottom: 80px;
+  }
+  
+  .row ul{
+    flex-direction: column;
+    align-items: center;
+
+  }
+
+  .row ul li{
+    margin: 15px 0;
+    height: 400px;
+    width: 500px;
+  }
+
+
+  .works-row ul{
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .works-row ul li{
+    margin-bottom: 25px;
+  }
+
+  .about{
+    height: 1000px;
+    margin-top:10px;
+    /* margin-bottom:5px; */
+  }
+
+  .about img{
+    margin-left:30px;
+  }
+
+  .about-container{
+    /* width: 100%; */
+  }  
+
+  .myname{
+    font-size:150%;
+    /* margin-left: 50px; */
+  }
+
+  .about-content{
+    font-size:80%;
+  }
+
+  .career{
+    font-size: 60%;
+  }
+
+  .skill{
+    font-size: 5%;
+  }
+
+  .footer{
+
+  }
+
+  
+  .footer-logo{
+    font-size: 10%;
+    padding-top: 5px;
+    
+  }
+
+  
+
+  .footer-nav a{
+    font-size:10%;
+    
+  }
+
+  .footer-nav li{
+    padding: 0 5px;
+  }
+
+  .footer-top{
+    /* width: 100%; */
+  }
+
+  .footer p{
+    font-size:5%;
+    padding-top:0;
+  }
+
+  .contact p{
+    font-size: 70%;
+  }
+
+  form input{
+    font-size: 50%;
+  }
+
+  form textarea{
+    width: 400px;
+    font-size: 50%;
+  }
+
+  .header-logo{
+    font-size: 50%;
+    padding-top: 10px;
+  }
+
+  .header-nav a{
+    font-size: 15%;
+  }
+
+  .header-nav li{
+    padding: 0 3px;
+  }
+
+  .row ul{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .row ul li{
+    height: 400px;
+    width: 350px;
+  }
+
+
+  .works-row ul{
+    flex-direction: column;
+    align-items: center;
+    width: 100%; 
+    margin-left:15px;
+  }
+
+  .works p{
+    font-size: 70%;
+  }
+
+  .works-row img{
+    width: 350px;
+    height: 200px;
+  }
+
+  .works-row ul li{
+    margin-bottom: 25px;
+    
+  }
+
+   /*　ハンバーガーボタン　*/
+.hamburger {
+  display : block;
+  position: absolute;
+  z-index : 3;
+  right : 13px;
+  top   : 12px;
+  width : 42px;
+  height: 42px;
+  cursor: pointer;
+  text-align: center;
+}
+.hamburger span {
+  display : block;
+  position: absolute;
+  width   : 30px;
+  height  : 2px ;
+  left    : 6px;
+  background : #555;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition   : 0.3s ease-in-out;
+  transition        : 0.3s ease-in-out;
+}
+.hamburger span:nth-child(1) {
+  top: 10px;
+}
+.hamburger span:nth-child(2) {
+  top: 20px;
+}
+.hamburger span:nth-child(3) {
+  top: 30px;
+}
+
+/* ナビ開いてる時のボタン */
+.hamburger.active span:nth-child(1) {
+  top : 16px;
+  left: 6px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform   : rotate(-45deg);
+  transform        : rotate(-45deg);
+}
+
+.hamburger.active span:nth-child(2),
+.hamburger.active span:nth-child(3) {
+  top: 16px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform   : rotate(45deg);
+  transform        : rotate(45deg);
+}
+
+
+
+#globalMenuSp {
+  position: relative;
+  z-index : 2;
+  top  : 0;
+  left : 0;
+  color: white;
+  background: black;
+  text-align: center;
+  transform: translateX(100%);
+  transition: all 0.6s;
+  width: 80%;
+  /* float: right; */
+}
+
+#globalMenuSp ul {
+  background: black;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+}
+
+#globalMenuSp ul li {
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+  border-bottom: 1px solid #fff;
+}
+#globalMenuSp ul li:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+#globalMenuSp ul li:hover{
+  background :#ddd;
+}
+
+#globalMenuSp ul li a {
+  display: block;
+  color: white;
+  font-weight: bold;
+  padding: 1em 0;
+  text-decoration :none;
+}
+
+#globalMenuSp ul li a:hover{
+  color:black;
+}
+
+/* このクラスを、jQueryで付与・削除する */
+#globalMenuSp.active {
+  transform: translateX(0%);
+}
+
+
+  
+ }

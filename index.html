@@ -3,12 +3,49 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 ">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="reset.css">
+  <!-- <link rel="text/javascript" href="script.js"> -->
   <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
   <title>Yuya Hamada</title>
+
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+
+<!-- スムーズスクロール部分の記述 -->
+<script>
+$(function(){
+   // #で始まるアンカーをクリックした場合に処理
+   $('a[href^=#]').click(function() {
+      // スクロールの速度
+      var speed = 400; // ミリ秒
+      // アンカーの値取得
+      var href= $(this).attr("href");
+      // 移動先を取得
+      var target = $(href == "#" || href == "" ? 'html' : href);
+      // 移動先を数値で取得
+      var position = target.offset().top;
+      // スムーススクロール
+      $('body,html').animate({scrollTop:position}, speed, 'swing');
+      return false;
+   });
+
+   $('html,body').animate({ scrollTop: 0 }, '1');
+});
+
+$(function() {
+    $('.hamburger').click(function() {
+        $(this).toggleClass('active');
+ 
+        if ($(this).hasClass('active')) {
+            $('#globalMenuSp').addClass('active');
+        } else {
+            $('#globalMenuSp').removeClass('active');
+        }
+    });
+});
+</script>
 </head>
 
 <body>
@@ -16,16 +53,27 @@
     <header>
       <div class="header-wrapper">
         <div class="header-top">
-          <h1 class="header-logo">Yuya Hamada</h1>
+          <h1 class="header-logo"><a href="/index.html">Yuya Hamada</a></h1>
+          <div class="nav-wrapper">
 
-          <div class="header-nav">
+            <div class="hamburger">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            
+
+          <div id="globalMenuSp" class="header-nav">
             <ul>
-              <li><a href="">About</a></li>
-              <li><a href="">Service</a></li>
-              <li><a href="">Works</a></li>
-              <li><a href="">Contact</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#service">Service</a></li>
+              <li><a href="#works">Works</a></li>
+              <li><a href="#contact">Contact</a></li>
             </ul>
           </div>
+        </div>
+        
+        
         </div>
         <div class="catchcopy">
           <div class="header-message">『理想を<span class="katachi">形</span>に』</div>
@@ -39,7 +87,7 @@
     </header>
 
     <div class="main-container">
-      <div class="about">
+      <div id="about" class="about">
         <h2 class="column about-top">About</h2>
         <img src="images/myface.jpg" alt="顔写真" width="">
         <div class="about-container">
@@ -76,7 +124,8 @@
 
               <span class="about-content">＜スキル＞</span>
               <div class="skill">
-                <i class="fab fa-html5"></i>HTML / <i class="fab fa-css3-alt"></i>CSS / <i class="fab fa-sass"></i>SASS / <i class="fas fa-database"></i>my SQL / <i class="fab fa-wordpress"></i>WordPress / <i class="fab fa-php"></i>PHP / jQuery / Ruby / Ruby on Rails
+          
+                <i class="fab fa-html5"></i>HTML / <i class="fab fa-css3-alt"></i>CSS / <i class="fas fa-database"></i>my SQL / <i class="fab fa-wordpress"></i>WordPress / <i class="fab fa-php"></i>PHP / jQuery / Ruby 
               </div>
 
           </div>
@@ -84,7 +133,7 @@
       </div>
 
 
-        <div class="service">
+        <div id="service" class="service">
           <h2 class="column">Service</h2>
           <div class="row">
             <ul>
@@ -122,14 +171,14 @@
 
 
 
-      <div class="works">
+      <div id="works" class="works">
         <h2 class="column">Works</h2>
         <p>以下の画像をクリックすると作品の詳細が見れます。</p>
         <div class="works-row">
           <ul>
-            <li><a href=""><img src="images/site1.png" alt="" width="400px" height="300px"></a></li>
-            <li><a href=""><img src="images/site2.png" alt="" width="400px" height="300px"></a></li>
-            <li><a href=""><img src="images/site3.png" alt="" width="400px" height="300px"></a></li>
+            <li><a href="/work1.html"><img src="images/site1.png" alt="" width="400px" height="300px"></a></li>
+            <li><a href="/work2.html"><img src="images/site2.png" alt="" width="400px" height="300px"></a></li>
+            <li><a href="/work3.html"><img src="images/site3.png" alt="" width="400px" height="300px"></a></li>
           </ul>
 
         </div>
@@ -137,24 +186,38 @@
 
       </div>
 
-      <div class="contact">
-        <h2 class="column">Contact</h2>
-        <div class="form">
-          <p>題名</p>
-          <input type="text" name="" value="">
-          <p>お名前</p>
-          <input type="text" name="" value="">
-          <p>メールアドレス</p>
-          <input type="text" name="" value="">
-          <p>お問い合わせ内容</p>
-          <textarea name="name" rows="8" cols="80"></textarea>
-        </div>
+      <div id="contact" class="contact">
+        <h2 class="column contact-top">Contact</h2>
+        
+        <form class="" action="confirm.php" method="post">
+          <p>件名（必須）</p>
+          <input type="text" name="title" value="" placeholder="例）Web制作の依頼について">
+          <p>お名前（必須）</p>
+          <input type="text" name="name" value="" placeholder="例）濱田　裕也">
+          <p>メールアドレス（必須）</p>
+          <input type="email" name="email" value="" placeholder="例）abc@outlook.jp">
+          <p>お問い合わせ内容（必須）</p>
+          <textarea name="contact_body" rows="8" cols="50" placeholder="お問い合わせ内容（300文字まで）をお書きください"　></textarea><br>
+          <input class="submit" type="submit" name="submit" value="確認画面へ">
+        </form>
+
 
       </div>
 
 
       <footer>
         <div class="footer">
+          <div class="footer-top">
+            <h1 class="footer-logo"><a href="#">Yuya Hamada</a></h1>
+            <div class="footer-nav">
+              <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#service">Service</a></li>
+                <li><a href="#works">Works</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+            </div>
+          </div>
           <p>©︎2021 Yuya Hamada Portfolio.</p>
         </div>
       </footer>
