@@ -14,20 +14,15 @@ time, mark, audio, video {
     padding:0;
     border:0;
     outline:0;
-    font-size:100%;
+    font-size:62.5%;
     vertical-align:baseline;
     background:transparent;
 }
 
 body {
-    font-family: "Helvetica Neue",
-    Arial,
-    "Hiragino Kaku Gothic ProN",
-    "Hiragino Sans",
-    Meiryo,
-    sans-serif;
+    font-family: 'Noto Sans JP', sans-serif;
     line-height:1;
-    background-color: #f5f4e8;
+    background-color: #003366 ;
     height: 100%;
     margin: 0;
     
@@ -44,6 +39,10 @@ footer{
 article,aside,details,figcaption,figure,
 footer,header,hgroup,menu,nav,section {
     display:block;
+}
+
+li{
+    list-style: none;
 }
 
 nav ul {
@@ -66,6 +65,7 @@ a {
     font-size:100%;
     vertical-align:baseline;
     background:transparent;
+    text-decoration: none;
 }
 
 /* change colours to suit your needs */
@@ -110,6 +110,11 @@ hr {
 input, select {
     vertical-align:middle;
 }
+
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
 
 
 
