@@ -28,7 +28,7 @@ header {
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
-  padding: 2% 3%;
+  padding: 0 1%;
 }
 
 #fv {
@@ -60,9 +60,9 @@ header a {
 }
 
 .logo{
-  padding:5px 0;
-  border-top: 1px solid white;
-  border-bottom: 1px solid white;
+  /* padding:5px 0; */
+  /* border-top: 1px solid white;
+  border-bottom: 1px solid white; */
   text-decoration: none;
 }
 
@@ -678,8 +678,8 @@ input {
     width: 35px;
     /* background-color: white; */
     position: fixed;
-    top: 10px;
-    right: 10px;
+    top: 50px;
+    right: 15px;
     z-index: 999;
   }
 
@@ -731,7 +731,7 @@ input {
   .header-top {
     width: 100%;
     padding-top: 5px;
-    padding-left: 30px;
+    padding-left: 20px;
   }
 
   .header-wrapper {
@@ -920,8 +920,8 @@ input {
       width: 35px;
       /* background-color: white; */
       position: fixed;
-      top: 10px;
-      right: 10px;
+      top: 50px;
+      right: 15px;
       z-index: 999;
     }
   
