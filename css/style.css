@@ -71,6 +71,11 @@ header a {
   font-weight: bold;
 }
 
+.header-logo img{
+  width:100px;
+  height:100px;
+}
+
 button{
   display: none;
 }
@@ -534,6 +539,11 @@ input {
     font-weight: bold;
   }
 
+  .header-logo a img{
+    height: 50px;
+    width: 50px;
+  }
+
   .sub-copy h2 {
     font-size: 8rem;
   }
@@ -678,7 +688,7 @@ input {
     width: 35px;
     /* background-color: white; */
     position: fixed;
-    top: 50px;
+    top: 25px;
     right: 15px;
     z-index: 999;
   }
@@ -743,6 +753,11 @@ input {
     font-size: 1.6rem;
     padding-top: 15px;
     font-weight: bold;
+  }
+
+  .header-logo img{
+    height:30px;
+    width: 30px;
   }
 
   .header-nav a {
@@ -920,7 +935,7 @@ input {
       width: 35px;
       /* background-color: white; */
       position: fixed;
-      top: 50px;
+      top: 15px;
       right: 15px;
       z-index: 999;
     }
