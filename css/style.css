@@ -372,11 +372,6 @@ input {
   width: 280px;
 }
 
-.start p img{
-  width: 500px;
-  height: 280px;
-}
-
 
 
 @media all and (min-width: 769px) and (max-width: 1024px) {
