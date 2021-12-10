@@ -365,11 +365,16 @@ input {
 .start p{
   position: fixed;
   left: 25%;
-  top: 30%;
+  top: 25%;
   transform: translate(-50%,50%);
   display: none;
   z-index: 9999;
   width: 280px;
+}
+
+.start p img{
+  width: 500px;
+  height: 280px;
 }
 
 
