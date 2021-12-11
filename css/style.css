@@ -125,11 +125,6 @@ button{
   margin-top: 30px;
 }
 
-
-.katachi {
-  color: #F9CE00;
-}
-
 #about {
   padding-top: 140px;
   height: 1000px;
@@ -396,10 +391,6 @@ input {
 
   .header-wrapper {
     width: 100%;
-  }
-
-  .header-logo {
-    font-size: 2rem;
   }
 
   .header-nav a {
