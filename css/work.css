@@ -73,22 +73,21 @@ header {
 @media all and (min-width: 321px) and (max-width: 425px) {
   
   .work-title h1 {
-    font-size: 140%;
-    ;
+    font-size: 2.4rem;
     padding-bottom: 25px;
   }
 
   .work-title p {
-    font-size: 70%;
+    font-size: 1.6rem;
     padding: 10px 0;
   }
 
   .work-title h4 {
-    font-size: 70%;
+    font-size: 1.2rem;
   }
 
   .link {
-    font-size: 70%;
+    font-size: 1rem;
   }
 
   #menuButton{
@@ -99,22 +98,21 @@ header {
 @media all and (max-width: 320px) {
   
   .work-title h1 {
-    font-size: 100%;
-    ;
+    font-size: 2rem;
     padding-bottom: 25px;
   }
 
   .work-title p {
-    font-size: 50%;
+    font-size: 1.4rem;
     padding: 10px 0;
   }
 
   .work-title h4 {
-    font-size: 40%;
+    font-size: 1rem;
   }
 
   .link {
-    font-size: 40%;
+    font-size: 0.8rem;
   }
 
   #menuButton{

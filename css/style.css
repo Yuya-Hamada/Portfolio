@@ -11,7 +11,7 @@ header {
 .fadein {
   opacity : 0;
   transform: translateY(20px);
-  transition: all 1.5s;
+  transition: all 1s;
 }
 
 .fixed{
