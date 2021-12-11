@@ -1,5 +1,4 @@
-// ページイベント
-
+// ページ来訪時イベント
 $(function(){
     setTimeout(function(){
         $(".start p").fadeIn(1600);
@@ -9,7 +8,7 @@ $(function(){
     }, 2500); //2.5秒後にフェードアウト
 });
 
-
+//スムーススクロール
 $(function () {
     // #で始まるアンカーをクリックした場合に処理
     $('a[href^="#"]').click(function () {
@@ -27,38 +26,35 @@ $(function () {
         }, speed, 'swing');
         return false;
     });
+});
 
-    // スライドでheader変化
-    $(function () {
-        var $win = $(window),
-            $fv = $("#fv"),
-            $header = $("header"),
-            $fvHeight = $fv.outerHeight(),
-            fixedClass = "fixed";
+//リロード時にトップに
+$(function(){
+    $("html,body").animate({
+        scrollTop: 0
+    }, "1");
+})
 
-        $win.on("load scroll", function () {
-            var value = $(this).scrollTop();
-            if ($(this).scrollTop() > $fvHeight) {
-                $header.addClass(fixedClass);
+// スティッキーヘッダー
+$(function () {
+    var $win = $(window),
+        $fv = $("#fv"),
+        $header = $("header"),
+        $fvHeight = $fv.outerHeight(),
+        fixedClass = "fixed";
 
-            } else {
-                $header.removeClass(fixedClass);
-            }
-        });
+    $win.on("load scroll", function () {
+        var value = $(this).scrollTop();
+        if ($(this).scrollTop() > $fvHeight) {
+            $header.addClass(fixedClass);
+
+        } else {
+            $header.removeClass(fixedClass);
+        }
     });
 });
 
-    // $(function(){
-    //     $(".sub-copy").each(function () {
-    //         var scroll = $(window).height();
-    //         var windowHeight = $(window).height();
-    //         var target = $(this).offset().top;    
-    //         if (scroll > target - windowHeight + 300) {
-    //             $(".sub-copy").hide().fadeIn();
-    //         }
-    //     });
-    // })
-
+    //fadeinクラスを動かす
     $(function(){
         $(window).scroll(function (){
             $('.fadein').each(function(){
@@ -71,8 +67,7 @@ $(function () {
                 }
             });
         });
-    });      
-        
+    });          
 
 // ハンバーガーメニュー
 $(function () {
@@ -83,8 +78,6 @@ $(function () {
 
     $(".fadeout").click(function () {
         if (window.innerWidth <= 425) {
-            // $("button").removeClass("active");
-            // $(".header-nav").fadeOut(500);
             $('button').trigger('click');
         }
     });
